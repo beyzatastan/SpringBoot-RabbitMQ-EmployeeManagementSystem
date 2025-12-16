@@ -42,8 +42,11 @@ public class Employee {
     @Column(name = "hire_date", nullable = false)
     private LocalDate hireDate;
 
-    @Column(name = "department_id")
-    private Long departmentId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "department_id")
+    private Department department;
+
+    private String address;
 
     private String position;
 
