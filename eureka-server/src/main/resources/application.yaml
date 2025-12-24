@@ -25,3 +25,18 @@ management:
   endpoint:
     health:
       show-details: always
+
+
+    #eureka.client.register-with-eureka: Bu özellik, Eureka Client'ın kendisini Eureka Sunucusuna kaydetmesini (register) sağlar.
+    #Bu örnekte false olarak ayarlandığı için, Eureka Client kendisini Eureka
+    #Sunucusuna kaydetmeyecektir. Eureka Server üzerinde sadece diğer servislerin
+    #kayıtlı olmasını sağlayacak.
+
+    #eureka.client.fetch-registry: Bu özellik, Eureka Client'ın Eureka Sunucusundan servis
+    #kayıtlarını almasını (fetch) sağlar. Bu örnekte false olarak ayarlandığı için, Eureka Client
+    #Eureka Sunucusundan servis kayıtlarını almaz.
+
+    #eureka.client.service-url.defaultZone: Bu özellik, Eureka Client'ın Eureka Sunucusunun
+    #adresini belirtir. ${eureka.instance.hostname} ve ${server.port} değişkenleri,
+    #önceki ayarlarda belirtilen değerlerle değiştirilir.
+    #Bu durumda, http://localhost:8761/eureka olarak belirtilmiştir.
